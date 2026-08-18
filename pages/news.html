@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fuentes para mantener la coherencia tipográfica -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -10,19 +15,17 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../CSS/style.css" />
-    <title>Home | Jose Agustin Cordero</title>
+    <title>News | José Agustín Cordero</title>
   </head>
 
-  <!-- Bidy -->
   <body>
 
   <!-- Header -->
     <header>
-      <h1>news</h1>
+      <h1>News</h1>
     </header>
 
   <!-- Nav -->
-    <!-- Barra del navegador -->
   <nav>
     <ul class="nav nav-pills justify-content-end">
       <li class="nav-item">
@@ -32,38 +35,87 @@
         <a class="nav-link" href="./papers.html">Papers</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link btn btn-outline-primary" href="https://drive.google.com/file/d/1sIW53j2r9muVRuML5djQQc8bhkGgwG4b/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
+        <!-- Adaptado a btn-outline-dark para respetar el CSS personalizado -->
+        <a class="nav-link btn btn-outline-dark" href="https://drive.google.com/file/d/1sIW53j2r9muVRuML5djQQc8bhkGgwG4b/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+        <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button"
           aria-expanded="false">Menu</a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="./about.html">about</a></li>
-          <li><a class="dropdown-item" href="./news.html">news</a></li>
-          <li><a class="dropdown-item" href="./events.html">eventos</a></li>
+          <li><a class="dropdown-item" href="./about.html">About</a></li>
+          <li><a class="dropdown-item active" href="./news.html">News</a></li>
+          <li><a class="dropdown-item" href="./events.html">Eventos</a></li>
           <li>
             <hr class="dropdown-divider" />
           </li>
-          <li><a class="dropdown-item" href="https://www.conicet.gov.ar/">Intitucionales</a></li>
+          <li><a class="dropdown-item" href="https://www.conicet.gov.ar/" target="_blank">Institucionales</a></li>
         </ul>
       </li>
     </ul>
   </nav>
+
 <!-- Main -->
-    <main>
-      <section>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ipsa
-        voluptates provident placeat illum ratione dolores exercitationem
-        voluptas eos, vero doloremque amet pariatur, ab quae, expedita sint
-        numquam laborum eveniet.
-      </section>
+    <main class="container my-5">
+      
+      <!-- Fila centrada -->
+      <div class="row justify-content-center">
+        
+        <!-- col-lg-9 ocupa 3/4 de las 12 columnas disponibles en pantallas medianas y grandes -->
+        <div class="col-12 col-lg-9">
+          
+          <!-- Contenedor Tarjeta -->
+          <div class="card mb-5">
+            <!-- Padding interno generoso para que el texto respire -->
+            <div class="card-body p-4 p-md-5">
+              <h2 class="h4 text-muted fw-light mb-4">ARCHEOS: Plataforma Integral de Arqueometría: Inventario y Análisis Multimodal de Materiales Arqueológicos</h2>
+              
+              <!-- Inicio de la Noticia: Archeos -->
+              <article>
+                <h3 class="fw-bold mb-4" style="font-family: var(--font-display); color: var(--clay);">Actualización del Proyecto: Lanzamiento y Avances de Archeos</h3>
+                
+                <p class="text-justify" style="color: var(--ink);">
+                  <strong>Archeos</strong> es una plataforma integral web diseñada para el inventario, gestión y análisis multimodal del patrimonio arqueológico, con un enfoque particular en el Noroeste Argentino (NOA). Su gran diferencial es la capacidad de estructurar datos complejos (espaciales, morfométricos y tafonómicos) para alimentar modelos estadísticos y de Inteligencia Artificial (Machine Learning), permitiendo automatizar y profundizar la clasificación de materiales, especialmente del material cerámico.
+                </p>
+
+                <h4 class="fw-bold mt-5" style="font-family: var(--font-mono); font-size: 1rem; color: var(--slate); text-transform: uppercase;">Informe Detallado de Logros y Funcionalidades</h4>
+                <ul class="text-justify mt-3" style="line-height: 1.8; color: var(--muted);">
+                  <li class="mb-2"><strong style="color: var(--ink);">Arquitectura de Seguridad y Roles:</strong> Implementación de un sistema de autenticación robusta con contraseñas encriptadas y tokens criptográficos (JWT). Todas las rutas de modificación en el servidor (FastAPI) están blindadas. El sistema garantiza la <strong>trazabilidad científica</strong> capturando la autoría de cada registro. En el Frontend (React), la interfaz se adapta al usuario, protegiendo los datos de borrados accidentales si el operador tiene un rol de estudiante y no de administrador.</li>
+                  <li class="mb-2"><strong style="color: var(--ink);">Gestión de Jerarquía Espacial:</strong> Sistema completo para estructurar la procedencia del material en cascada (Sitios > Sectores > Cuadrículas > Capas Estratigráficas).</li>
+                  <li class="mb-2"><strong style="color: var(--ink);">Módulos de Inventario Especializado (CRUD Completo):</strong> Registro detallado para <strong>Cerámica</strong> (manufactura, morfología, tafonomía), <strong>Lítico</strong> (análisis dinámicos según la clase de artefacto), <strong>Óseo</strong> (identificación taxonómica, MNI, marcas antrópicas) y <strong>Suelo/Carbón</strong>. Todos los módulos cuentan con auto-llenado y borrado en cascada.</li>
+                  <li class="mb-2"><strong style="color: var(--ink);">Exportación y Análisis Estadístico:</strong> Capacidad de ingreso masivo vía CSV y exportación estandarizada para R, Pandas o Excel. Los endpoints en Python calculan estadísticas complejas al vuelo.</li>
+                  <li class="mb-2"><strong style="color: var(--ink);">Inteligencia Artificial y Visión Computacional:</strong> Sistema para subir y asociar fotografías de perfiles e iconografía. Contamos con un <strong>Motor de Predicción (Random Forest)</strong> funcional que procesa datos morfométricos, entrena un modelo para estimar el "Tipo Cerámico" y devuelve métricas de precisión y la importancia de cada variable.</li>
+                </ul>
+
+                <h4 class="fw-bold mt-5" style="font-family: var(--font-mono); font-size: 1rem; color: var(--slate); text-transform: uppercase;">Trabajos a Futuro y Tareas Pendientes</h4>
+                
+                <div class="mt-4">
+                  <h5 class="fw-bold" style="color: var(--ink);">A Corto Plazo (Agenda Inmediata):</h5>
+                  <p class="text-justify" style="color: var(--muted);">
+                    Implementaremos el "Modo Edición" en masa para el material lítico (Débitage) y actualizaremos el motor estadístico en Python para que agrupe cantidades y pesos de las bolsas, superando el simple conteo individual de piezas.
+                  </p>
+                </div>
+
+                <div class="mt-4">
+                  <h5 class="fw-bold" style="color: var(--ink);">A Mediano y Largo Plazo:</h5>
+                  <p class="text-justify" style="color: var(--muted);">
+                    Definiremos la arquitectura estratégica para abrir la plataforma a otros institutos (optando entre un Modelo de Red Colaborativa o Software como Servicio multi-tenant). Además, construiremos visualizaciones de datos (Dashboards) interactivos en React y expandiremos el motor de Machine Learning con algoritmos complementarios (como Support Vector Machines - SVM) para optimizar continuamente la clasificación del patrimonio.
+                  </p>
+                </div>
+
+              </article>
+              <!-- Fin de la Noticia -->
+
+            </div>
+          </div>
+          <!-- Fin Contenedor Tarjeta -->
+
+        </div>
+      </div>
     </main>
 
   <!-- Footer -->
     <footer>
-      <a href="https://www.researchgate.net/profile/Jose-Cordero-7"
-        ><p>®️Cordero Inc.</p></a
-      >
+      <a href="https://www.researchgate.net/profile/Jose-Cordero-7"><p>®️Cordero Inc.</p></a>
     </footer>
 
     <!-- Bootstrap -->
