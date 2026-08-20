@@ -63,51 +63,36 @@
         <!-- col-lg-9 ocupa 3/4 de las 12 columnas disponibles en pantallas medianas y grandes -->
         <div class="col-12 col-lg-9">
           
-          <!-- Contenedor Tarjeta -->
+          <!-- NUEVA TARJETA: Evolución de Archeos -->
           <div class="card mb-5">
-            <!-- Padding interno generoso para que el texto respire -->
             <div class="card-body p-4 p-md-5">
-              <h2 class="h4 text-muted fw-light mb-4">ARCHEOS: Plataforma Integral de Arqueometría: Inventario y Análisis Multimodal de Materiales Arqueológicos</h2>
-              
-              <!-- Inicio de la Noticia: Archeos -->
               <article>
-                <h3 class="fw-bold mb-4" style="font-family: var(--font-display); color: var(--clay);">Actualización del Proyecto: Lanzamiento y Avances de Archeos</h3>
+                <h3 class="fw-bold mb-4" style="font-family: var(--font-display); color: var(--clay);">Archeos: Evolución hacia una plataforma integral de Arqueometría e Inteligencia Artificial</h3>
                 
+                <h4 class="fw-bold mt-4" style="font-family: var(--font-mono); font-size: 1rem; color: var(--slate); text-transform: uppercase;">Resumen del Proyecto</h4>
                 <p class="text-justify" style="color: var(--ink);">
-                  <strong>Archeos</strong> es una plataforma integral web diseñada para el inventario, gestión y análisis multimodal del patrimonio arqueológico, con un enfoque particular en el Noroeste Argentino (NOA). Su gran diferencial es la capacidad de estructurar datos complejos (espaciales, morfométricos y tafonómicos) para alimentar modelos estadísticos y de Inteligencia Artificial (Machine Learning), permitiendo automatizar y profundizar la clasificación de materiales, especialmente del material cerámico.
+                  En la última iteración de desarrollo, la plataforma Archeos ha dado un salto cualitativo significativo, dejando de ser un simple sistema de inventario para convertirse en un ecosistema integral de análisis arqueológico. Esta actualización dota al proyecto de herramientas computacionales avanzadas, diseñadas para responder a las exigencias de rigor, seguridad y procesamiento de datos del sistema científico nacional.
                 </p>
 
-                <h4 class="fw-bold mt-5" style="font-family: var(--font-mono); font-size: 1rem; color: var(--slate); text-transform: uppercase;">Informe Detallado de Logros y Funcionalidades</h4>
+                <h4 class="fw-bold mt-5" style="font-family: var(--font-mono); font-size: 1rem; color: var(--slate); text-transform: uppercase;">Principales Avances e Integraciones</h4>
                 <ul class="text-justify mt-3" style="line-height: 1.8; color: var(--muted);">
-                  <li class="mb-2"><strong style="color: var(--ink);">Arquitectura de Seguridad y Roles:</strong> Implementación de un sistema de autenticación robusta con contraseñas encriptadas y tokens criptográficos (JWT). Todas las rutas de modificación en el servidor (FastAPI) están blindadas. El sistema garantiza la <strong>trazabilidad científica</strong> capturando la autoría de cada registro. En el Frontend (React), la interfaz se adapta al usuario, protegiendo los datos de borrados accidentales si el operador tiene un rol de estudiante y no de administrador.</li>
-                  <li class="mb-2"><strong style="color: var(--ink);">Gestión de Jerarquía Espacial:</strong> Sistema completo para estructurar la procedencia del material en cascada (Sitios > Sectores > Cuadrículas > Capas Estratigráficas).</li>
-                  <li class="mb-2"><strong style="color: var(--ink);">Módulos de Inventario Especializado (CRUD Completo):</strong> Registro detallado para <strong>Cerámica</strong> (manufactura, morfología, tafonomía), <strong>Lítico</strong> (análisis dinámicos según la clase de artefacto), <strong>Óseo</strong> (identificación taxonómica, MNI, marcas antrópicas) y <strong>Suelo/Carbón</strong>. Todos los módulos cuentan con auto-llenado y borrado en cascada.</li>
-                  <li class="mb-2"><strong style="color: var(--ink);">Exportación y Análisis Estadístico:</strong> Capacidad de ingreso masivo vía CSV y exportación estandarizada para R, Pandas o Excel. Los endpoints en Python calculan estadísticas complejas al vuelo.</li>
-                  <li class="mb-2"><strong style="color: var(--ink);">Inteligencia Artificial y Visión Computacional:</strong> Sistema para subir y asociar fotografías de perfiles e iconografía. Contamos con un <strong>Motor de Predicción (Random Forest)</strong> funcional que procesa datos morfométricos, entrena un modelo para estimar el "Tipo Cerámico" y devuelve métricas de precisión y la importancia de cada variable.</li>
+                  <li class="mb-2"><strong style="color: var(--ink);">Arquitectura Segura y Escalable (Multi-Tenant):</strong> Se implementó un sistema de inquilino múltiple con autenticación por tokens (JWT). Esto permite que distintos equipos de investigación puedan coexistir en la misma infraestructura de base de datos, garantizando la privacidad absoluta y el control de acceso a sus propios yacimientos, contextos y materiales.</li>
+                  <li class="mb-2"><strong style="color: var(--ink);">Laboratorio de Inteligencia Artificial:</strong> Se desarrolló un módulo de Machine Learning multimodal que opera directamente sobre los datos del inventario. El sistema permite contrastar empíricamente algoritmos de ensamblaje (Random Forest) y máquinas de vectores de soporte (SVM lineal) para la predicción automatizada de tipologías cerámicas basándose en atributos morfológicos y técnicos. Además, incorpora visualizaciones de Feature Importance para auditar el peso predictivo de cada variable.</li>
+                  <li class="mb-2"><strong style="color: var(--ink);">Visor Espacial Integrado:</strong> La plataforma ahora cuenta con un módulo de cartografía digital impulsado por react-leaflet. Este visor interactivo procesa las coordenadas geográficas de la base de datos y mapea la distribución espacial de los yacimientos en tiempo real sobre cartografía de base (OpenStreetMap).</li>
+                  <li class="mb-2"><strong style="color: var(--ink);">Generación de Reportes Estandarizados:</strong> Para agilizar el trabajo de laboratorio y la redacción de informes, se desarrolló un motor de exportación en PDF. Con un solo clic, el sistema ensambla fichas técnicas formales que integran los datos de procedencia estratigráfica, métricas físicas y el diagnóstico predictivo de la IA, listas para ser adjuntadas en publicaciones o memorias de campo.</li>
                 </ul>
 
-                <h4 class="fw-bold mt-5" style="font-family: var(--font-mono); font-size: 1rem; color: var(--slate); text-transform: uppercase;">Trabajos a Futuro y Tareas Pendientes</h4>
-                
-                <div class="mt-4">
-                  <h5 class="fw-bold" style="color: var(--ink);">A Corto Plazo (Agenda Inmediata):</h5>
-                  <p class="text-justify" style="color: var(--muted);">
-                    Implementaremos el "Modo Edición" en masa para el material lítico (Débitage) y actualizaremos el motor estadístico en Python para que agrupe cantidades y pesos de las bolsas, superando el simple conteo individual de piezas.
-                  </p>
-                </div>
-
-                <div class="mt-4">
-                  <h5 class="fw-bold" style="color: var(--ink);">A Mediano y Largo Plazo:</h5>
-                  <p class="text-justify" style="color: var(--muted);">
-                    Definiremos la arquitectura estratégica para abrir la plataforma a otros institutos (optando entre un Modelo de Red Colaborativa o Software como Servicio multi-tenant). Además, construiremos visualizaciones de datos (Dashboards) interactivos en React y expandiremos el motor de Machine Learning con algoritmos complementarios (como Support Vector Machines - SVM) para optimizar continuamente la clasificación del patrimonio.
-                  </p>
-                </div>
-
+                <h4 class="fw-bold mt-5" style="font-family: var(--font-mono); font-size: 1rem; color: var(--slate); text-transform: uppercase;">Impacto</h4>
+                <p class="text-justify mb-0" style="color: var(--ink);">
+                  Estas implementaciones consolidan el enfoque metodológico multimodal de Archeos, demostrando cómo la convergencia entre bases de datos relacionales, analítica espacial y aprendizaje automático puede potenciar significativamente el estudio del patrimonio cerámico.
+                </p>
               </article>
-              <!-- Fin de la Noticia -->
-
             </div>
           </div>
-          <!-- Fin Contenedor Tarjeta -->
+          <!-- Fin NUEVA TARJETA -->
+
+
+          
 
         </div>
       </div>
